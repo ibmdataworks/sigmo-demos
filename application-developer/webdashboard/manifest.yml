@@ -1,0 +1,10 @@
+applications:
+- name: NodejsDashboard
+  path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  host: NodejsDashboard
+  disk_quota: 1024M
+  buildpack: nodejs_buildpack
+  command: node app.js
