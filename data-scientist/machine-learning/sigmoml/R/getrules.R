@@ -1,4 +1,4 @@
-# Copyright (c) 2015 IBM Corporation and others.
+# Copyright (c) 2016 IBM Corporation and others.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # You may not use this file except in compliance with the License.
@@ -57,7 +57,7 @@ getRules.simpleparty <- function(tree, ...) {
           rules <- getRules(nodes=tree$node$kids, parentNode=tree$node, parentLabels=parentLabels, tree=tree)
     }
     # returning rules data frame
-    rbind.fill(lapply(rules, as.data.frame))
+    rbind.fill(lapply(rules, as.data.frame, stringsAsFactors=FALSE))
 }
 
 getRules.list <- function(nodes, parentNode, parentLabels, tree, level=0, ...) {
