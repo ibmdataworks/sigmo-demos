@@ -12,7 +12,7 @@ getRules(node, ...)
 \description{
 This function "flattens" the decision tree: the resulting data frame 
 contains Predition, Samples (the number of training samples matched to the branch),
-Error (the number of training samples misclassified by this branch),
+Error (the percent of training samples misclassified by this branch),
 Name (a short name for the branch, the same as the last condition),
 Level1, ..., Leveln (the condition on the i-th level of the branch)
 }
