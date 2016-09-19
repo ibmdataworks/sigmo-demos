@@ -103,7 +103,7 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
 > *Note: Allow your new SDK for Node.js runtime service to stage. This could take 30-40 seconds.*
 
-1.  Click on the “**Connections**” tab in the top navigation bar when staging is complete.
+6.  Click on the “**Connections**” tab in the top navigation bar when staging is complete.
 
     1.  Click on the blue “**Connect Existing**” button on the top, left side of the page.
 
@@ -115,7 +115,7 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
     5.  Binding services allows the Node.js service to authenticate to Cloudant without hard coding credentials in the JavaScript code. It uses environment variables on the server-side to share the credentials between services.
 
-2.  In the top, navigation bar click the “**Overview**” tab.
+7.  In the top, navigation bar click the “**Overview**” tab.
 
     1.  In the Continuous Delivery panel select “**Add Git Repo and Pipeline**”
 
@@ -131,17 +131,17 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
 > *Populate the repo with the starter app package and enable the Build & Deploy pipeline?*
 
-1.  Tick the box and click Continue
+	7.  Tick the box and click Continue
 
-2.  Once the Git repo is created you will be notified. Click **Close**
+	8.  Once the Git repo is created you will be notified. Click **Close**
 
-3.  In the Continuous Deliver panel select Configure
+	9.  In the Continuous Deliver panel select Configure
 
-4.  You should see two stages which have been created for you. One for Build and the other for Deploy.
+	10.  You should see two stages which have been created for you. One for Build and the other for Deploy.
 
 <!-- -->
 
-1.  DevOps Service for Bluemix
+8.  DevOps Service for Bluemix
 
     1.  Click on the settings “star” icon for the **Build Stage** and select **Configure Stage**.
 
@@ -151,7 +151,7 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
     4.  Click “**Save**”
 
-2.  Return to your Git repo
+9.  Return to your Git repo
 
     1.  Select “**Edit Code**” on the top navigation bar
 
@@ -169,7 +169,7 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
     8.  You will need to edit **Manifest.yml** to change the location where the application is hosted. Change both occurrences of NodejsDashboard to the name of your mybluemix.net host route. The host is usually the same name as your project unless there was a conflict. Note: The file will save automatically.
 
-3.  In the left-hand navigation bar click the **Git** icon <img src="./media/image5.png" width="29" height="32" /> just below “**edit code**”
+10.  In the left-hand navigation bar click the **Git** icon <img src="./media/image5.png" width="29" height="32" /> just below “**edit code**”
 
     1.  Allow the page to completely refresh all the code changes. You should 11 files selected in the right-hand pane.
 
@@ -177,7 +177,7 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
     3.  In the **Outgoing** source tab on the left side of the page click **Push**. This will deliver (push) the commits to the server.
 
-4.  DevOps Service for Bluemix
+11.  DevOps Service for Bluemix
 
     1.  Select **Build and Deploy** on the top navigation bar
 
@@ -185,7 +185,7 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
     3.  Once the Deploy stage has completed and passed, right click on the application URL and **open in a new browser tab**.
 
-5.  Node.js runtime Service
+12.  Node.js runtime Service
 
     1.  Browse to your mybluemix.net URL where your web application is hosted. You should see a d3.js graph with 5 bars representing the 5 zones in the store.
 
