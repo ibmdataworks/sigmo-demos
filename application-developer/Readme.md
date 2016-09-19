@@ -42,19 +42,19 @@ Initialize Source Data Repository: Cloudant NoSQL DB Service
 
 <!-- -->
 
-1.  Create a new database named “**greatoutdoors**” (*Note: database names are case sensitive*). Click **create** to finalize the creation.
+7.  Create a new database named “**greatoutdoors**” (*Note: database names are case sensitive*). Click **create** to finalize the creation.
 
-2.  In the following steps we will create two indices to allow queries against the data set. Note: Any parameter which is used in a query must be indexed.
+8.  In the following steps we will create two indices to allow queries against the data set. Note: Any parameter which is used in a query must be indexed.
 
-3.  Click the + symbol on **Design Documents**.
+9.  Click the + symbol on **Design Documents**.
 
-4.  Select **Query Indexes**
+10.  Select **Query Indexes**
 
-5.  Click in the **Index** text box and select all the text
+11.  Click in the **Index** text box and select all the text
 
 <!-- -->
 
-1.  Replace the text with the following text:
+12.  Replace the text with the following text:
 
 > {
 >
@@ -70,11 +70,11 @@ Initialize Source Data Repository: Cloudant NoSQL DB Service
 >
 > }
 
-1.  Click “**Create Index**”
+13.  Click “**Create Index**”
 
-2.  Click on the **greatoutdoors** database to return to the database page.
+14.  Click on the **greatoutdoors** database to return to the database page.
 
-3.  Create another index with the following text:
+15.  Create another index with the following text:
 
 > {
 >
@@ -86,11 +86,11 @@ Initialize Source Data Repository: Cloudant NoSQL DB Service
 >
 > }
 
-1.  Click “**Create Index**”
+16.  Click “**Create Index**”
 
 > *Note: If the creation of either index fails, check to be sure that the double quotes have not been mangled by the cut-and-paste process. They should be standard double quotes and not inverted.*
 
-1.  You are now ready to move to the next service – SDK for Node.js Runtime. Return to the previous browser tab and click on the **catalog** button in the top navigation bar.
+17.  You are now ready to move to the next service – SDK for Node.js Runtime. Return to the previous browser tab and click on the **catalog** button in the top navigation bar.
 
 Initialize Target Data Repository: SDK for Node.js Runtime Service
 ==================================================================
