@@ -40,8 +40,6 @@ Initialize Source Data Repository: Cloudant NoSQL DB Service
 
 6.  In the top navigation bar select “**Create Database**”
 
-<!-- -->
-
 7.  Create a new database named “**greatoutdoors**” (*Note: database names are case sensitive*). Click **create** to finalize the creation.
 
 8.  In the following steps we will create two indices to allow queries against the data set. Note: Any parameter which is used in a query must be indexed.
@@ -51,8 +49,6 @@ Initialize Source Data Repository: Cloudant NoSQL DB Service
 10.  Select **Query Indexes**
 
 11.  Click in the **Index** text box and select all the text
-
-<!-- -->
 
 12.  Replace the text with the following text:
 
