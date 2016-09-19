@@ -119,7 +119,7 @@ Initialize Target Data Repository: SDK for Node.js Runtime Service
 
     1.  In the Continuous Delivery panel select “**Add Git Repo and Pipeline**”
 
-    2.  If you already have a jazz.net account bind with that account. Otherwise, enter a n alias (account name) to allow Bluemix to create a Dev Ops account for you.
+    2.  If you already have a jazz.net account bind with that account. Otherwise, enter an alias (account name) to allow Bluemix to create a Dev Ops account for you.
 
     3.  Accept the DevOps Services terms by ticking the box.
 
