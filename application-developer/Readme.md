@@ -1,7 +1,7 @@
 Introduction
 ============
 
-> This lab demonstrates setting up a software development environment in the cloud.
+> As an Application Developer, you need many services, programming languages with access to unified data platform. IBM DataWorks BlueMix provides many programming languages and services as well as an integrated DevOps to build, run, deploy and manage applications on the cloud. Perform these hands on exercises to build and deploy a live dashboard with Node.js and connect to document data store, IBM Cloudant based on CouchDB.
 
 Lab Components: IBM Bluemix Cloud Offering Used
 ===============================================
