@@ -1,35 +1,35 @@
-Introduction
+#Introduction
 ============
 
-> With developing Big Data, the functionality to support the work of
-> data scientists is one of the new areas on the market. IBM Data
-> Science Experience (DSX) is the premier offering that seamlessly
-> allows data scientists and data engineers to connect data from
-> multiple domains, to analyze it, and visually to explore the data for
-> insights. The solutions that were not possible previously or required
-> months of development effort can now be done in DSX in a very fast and
-> intuitive manner.
->
-> R has become the de-facto standard in the domain of data science: it
-> supports multiple machine learning algorithms and ability to visualize
-> the outcomes of the research.
->
-> DSX brings together the data science development experience
-> accumulated in R, Python, Scala, and Java, intuitive data connectivity
-> and processing capabilities of Spark, and the state-of-art dynamic
-> visualization technology using Brunel, Pixiedust, and RStudio.
->
-> In this lab we will explore how a data scientist utilizes DSX and IBM
-> Bluemix cloud services to easily analyze data using machine learning
-> techniques and to visualize the outcomes using DSX, R, and Brunel. For
-> the lab, we have chosen two algorithms to demonstrate supervised and
-> unsupervised machine learning in DSX. Decision tree-based
-> classification is one of the domains that allowed scientists to have
-> direct insights into the reasoning behind classification choices.
-> Association rules algorithms support market basket analysis.
->
-> The lab shows how to use these machine learning algorithms for
-> uncovering the data insights in sales data.
+ With developing Big Data, the functionality to support the work of
+ data scientists is one of the new areas on the market. IBM Data
+ Science Experience (DSX) is the premier offering that seamlessly
+ allows data scientists and data engineers to connect data from
+ multiple domains, to analyze it, and visually to explore the data for
+ insights. The solutions that were not possible previously or required
+ months of development effort can now be done in DSX in a very fast and
+ intuitive manner.
+
+ R has become the de-facto standard in the domain of data science: it
+ supports multiple machine learning algorithms and ability to visualize
+ the outcomes of the research.
+
+ DSX brings together the data science development experience
+ accumulated in R, Python, Scala, and Java, intuitive data connectivity
+ and processing capabilities of Spark, and the state-of-art dynamic
+ visualization technology using Brunel, Pixiedust, and RStudio.
+
+ In this lab we will explore how a data scientist utilizes DSX and IBM
+ Bluemix cloud services to easily analyze data using machine learning
+ techniques and to visualize the outcomes using DSX, R, and Brunel. For
+ the lab, we have chosen two algorithms to demonstrate supervised and
+ unsupervised machine learning in DSX. Decision tree-based
+ classification is one of the domains that allowed scientists to have
+ direct insights into the reasoning behind classification choices.
+ Association rules algorithms support market basket analysis.
+
+ The lab shows how to use these machine learning algorithms for
+ uncovering the data insights in sales data.
 
 Lab Components: DSX 
 ====================
