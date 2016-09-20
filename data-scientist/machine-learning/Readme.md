@@ -34,7 +34,7 @@
 #Lab Components: DSX 
 
 1.  **Source Data Repository**: **Object Storage Service**
-![] (https://raw.github.com/sigmo-demos/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg
+![] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg)
 sigmo-demos/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg
 > NOTE: This usually is the data hosted in a secure enterprise
 > environment that could be securely retrieved through a network tunnel
