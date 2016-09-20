@@ -34,16 +34,16 @@
 #Lab Components: DSX 
 
 1.  **Source Data Repository**: **Object Storage Service**
-![] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg)
-sigmo-demos/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg
+![Decision Tree Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg) {width="0.4479166666666667in" height="0.3958333333333333in"}
 > NOTE: This usually is the data hosted in a secure enterprise
 > environment that could be securely retrieved through a network tunnel
 > using the BlueMix Secure gateway. Since getting access to a data
 > hosted in an enterprise infrastructure can be a compliance and privacy
 > issue for this lab, we will be using sample datasets hosted in the IBM
 > Object Storage that would be used as a source data set.
+![Association Rules Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Association-Rules-Lab-Flow.jpg) {width="0.4479166666666667in" height="0.3958333333333333in"}
 
-1.  **Exploring sales data (for this lab, the data from IBM sample DB “GOSALES” was used): **
+2.  **Exploring sales data (for this lab, the data from IBM sample DB “GOSALES” was used): **
 
     a.  ![](media/image1.png){width="0.4479166666666667in"
         height="0.3958333333333333in"}![](media/image2.png){width="0.55in"
