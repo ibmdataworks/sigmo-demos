@@ -1,5 +1,5 @@
-#Introduction
-============
+#DSX: Machine Learning
+##Introduction
 
  With developing Big Data, the functionality to support the work of
  data scientists is one of the new areas on the market. IBM Data
@@ -31,11 +31,11 @@
  The lab shows how to use these machine learning algorithms for
  uncovering the data insights in sales data.
 
-Lab Components: DSX 
-====================
+#Lab Components: DSX 
 
 1.  **Source Data Repository**: **Object Storage Service**
-
+![] (https://raw.github.com/ sigmo-demos/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg
+sigmo-demos/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg
 > NOTE: This usually is the data hosted in a secure enterprise
 > environment that could be securely retrieved through a network tunnel
 > using the BlueMix Secure gateway. Since getting access to a data
@@ -43,8 +43,7 @@ Lab Components: DSX
 > issue for this lab, we will be using sample datasets hosted in the IBM
 > Object Storage that would be used as a source data set.
 
-1.  **Exploring sales data (for this lab, the data from IBM sample DB
-    > “GOSALES” was used): **
+1.  **Exploring sales data (for this lab, the data from IBM sample DB “GOSALES” was used): **
 
     a.  ![](media/image1.png){width="0.4479166666666667in"
         height="0.3958333333333333in"}![](media/image2.png){width="0.55in"
