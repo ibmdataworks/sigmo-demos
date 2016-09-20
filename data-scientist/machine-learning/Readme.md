@@ -34,34 +34,23 @@
 #Lab Components: DSX 
 
 1.  **Source Data Repository**: **Object Storage Service**
-![Decision Tree Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg) {width="0.4479166666666667in" height="0.3958333333333333in"}
 > NOTE: This usually is the data hosted in a secure enterprise
 > environment that could be securely retrieved through a network tunnel
 > using the BlueMix Secure gateway. Since getting access to a data
 > hosted in an enterprise infrastructure can be a compliance and privacy
 > issue for this lab, we will be using sample datasets hosted in the IBM
 > Object Storage that would be used as a source data set.
-![Association Rules Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Association-Rules-Lab-Flow.jpg) {width="0.4479166666666667in" height="0.3958333333333333in"}
 
 2.  **Exploring sales data (for this lab, the data from IBM sample DB “GOSALES” was used): **
 
-    a.  ![](media/image1.png){width="0.4479166666666667in"
-        height="0.3958333333333333in"}![](media/image2.png){width="0.55in"
-        height="0.23333333333333334in"}**Using Decision Tree**: **DSX
-        Notebooks, Brunel, R **
+    a.  **Using Decision Tree**: **DSX Notebooks, Brunel, R ** ![Decision Tree Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg "Decision Tree Lab Flow")
 
-    b.  **Using Association Rules**: **DSX RStudio**
+    b.  **Using Association Rules**: **DSX RStudio** ![Association Rules Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Association-Rules-Lab-Flow.jpg "Association Rules Lab Flow")
 
-![](media/image2.png){width="0.55in" height="0.23333333333333334in"}
 
-![](media/image3.png){width="0.7333333333333333in"
-height="0.21666666666666667in"}
+##Before You Begin
 
-Before You Begin
-================
-
-1.  Download Lab-DSX-ML.zip archive from the github.com location below
-    and extract the data file (transactions.csv) to your laptop:
+1.  Download Lab-DSX-ML.zip archive from the github.com location below and extract the data file (transactions.csv) to your laptop:
 
 > <https://github.com/ibmdataworks/sigmo-demos/tree/master/data-scientist/machine-learning>/archive
 >
@@ -84,14 +73,10 @@ Before You Begin
         software packages for the machine learning lab
         (association rules)
 
-1.  Log in to your IBM DSX account at:
-
-> <http://datascience.ibm.com/>
->
+1.  Login to your IBM DSX account at:  <http://datascience.ibm.com/>
 > NOTE: If you don’t have a DSX account then get started by registering
 > at <https://datasciencex.typeform.com/to/hWECJ3>
-
-1.  A quick outline of the procedures:
+2.  A quick outline of the procedures:
 
     a.  Decision tree lab (based on the DSX notebooks):
 
@@ -130,7 +115,7 @@ Before You Begin
 > and the user only needs to go through executing the code with the lab
 > without need to spend time on the installation procedures – there is
 > no need to reinstall the labs for the same environment.
->
+
 > NOTE: In the instructions the sequence “Menu &gt; Submenu &gt; Final
 > Item” would represent the sequence of users’ actions where they choose
 > first “Menu” from the menu bar, then the “Submenu” item in the opened
@@ -139,258 +124,148 @@ Before You Begin
 
 ***Start of Lab: Decision Tree***
 
-Decision Tree Lab Installation
-==============================
+##Decision Tree Lab Installation
 
-Initializing Source Data Repository: Object Storage Service
------------------------------------------------------------
+###Initializing Source Data Repository: Object Storage Service
 
 Use the Object Storage Service that is created for your account. You can
 alternatively create a new Object Storage Service by following these
 instructions:
 
-1.  In DSX, go to user profile settings
-    > ![](media/image4.png){width="0.375in"
-    > height="0.3472222222222222in"}
+1.  In DSX, go to user profile settings ![](media/image4.png)
 
-2.  Go to manage Bluemix account
-    > ![](media/image5.png){width="1.9583333333333333in"
-    > height="0.4444444444444444in"}
+2.  Go to manage Bluemix account ![](media/image5.png)
 
 3.  From the Bluemix dashboard catalog menu search for “Object Storage”
 
-4.  Click on the Object Storage Icon
-    > ![](media/image1.png){width="0.2222222222222222in"
-    > height="0.19444444444444445in"}
+4.  Click on the Object Storage Icon ![](media/image1.png)
 
-5.  Choose the default pre-filled values in the fields (optionally
-    > rename the “Service name:” to DS\_DSX\_ML\_ObjectStorage), select
-    > the “Free Pricing Plan” and click “Create” at the bottom of
-    > the page.
+5.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to DS\_DSX\_ML\_ObjectStorage), select the “Free Pricing Plan” and click “Create” at the bottom of the page.
 
-6.  Click on “Actions-&gt;Add Container” and enter “notebooks" as the
-    > container name.
+6.  Click on “Actions-&gt;Add Container” and enter “notebooks" as the container name.
 
 > NOTE: Once a new container is created, you get this message "There are
 > no files in the container you selected. Add files or view Object
 > Storage documentation."
 
-1.  Click on “Add files”.
+7.  Click on “Add files”.
 
-2.  Select and add the files previously downloaded (transactions.csv) to
-    > this Container.
+8.  Select and add the files previously downloaded (transactions.csv) to this Container.
 
 > NOTE: Your data files are now moved to the Object Storage into the
 > Bluemix.
 
-Initializing Apache Spark: Apache Spark Service
------------------------------------------------
+###Initializing Apache Spark: Apache Spark Service
 
 Use the Apache Spark Service that is created for your account. You can
 alternatively create a new Apache Spark Service by following these
 instructions (if you are already in the UI managing Bluemix account,
 please start from the step 3):
 
-1.  In DSX, go to user profile settings
-    ![](media/image4.png){width="0.375in" height="0.3472222222222222in"}
+1.  In DSX, go to user profile settings ![](media/image4.png)
 
-2.  Go to manage Bluemix account
-    ![](media/image5.png){width="1.9583333333333333in"
-    height="0.4444444444444444in"}
+2.  Go to manage Bluemix account ![](media/image5.png)
 
 3.  From the Bluemix dashboard catalog menu search for “Apache Spark”
 
-4.  Click on the Apache Spark Service Icon
-    ![](media/image6.png){width="0.2777777777777778in"
-    height="0.2777777777777778in"}
+4.  Click on the Apache Spark Service Icon ![](media/image6.png)
 
-5.  Choose the default pre-filled values in the fields (optionally
-    rename the “Service name:” to DS\_DSX\_ML\_Spark), select the needed
-    “Pricing Plan” and click “Create” at the bottom of the page.
+5.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to DS\_DSX\_ML\_Spark), select the needed  “Pricing Plan” and click “Create” at the bottom of the page.
 
-6.  Ensure that your service is up and running – the page that you are
-    transferred after creating the service shows the status of the
-    service (this is highlighted with the red rectangle)
-    ![](media/image7.jpeg){width="6.541666666666667in"
-    height="2.2777777777777777in"}
+6.  Ensure that your service is up and running – the page that you are transferred after creating the service shows the status of the service (this is highlighted with the red rectangle) ![](media/image7.jpeg)
 
 7.  Connect your Apache Spark service to your Object Storage service:
 
-    a.  Click on “NOTEBOOKS” button (it is highlighted in the green
-        rectangle on the previous snapshot)
+    a.  Click on “NOTEBOOKS” button (it is highlighted in the green rectangle on the previous snapshot)
 
-    b.  Click on Object Storage tab (it is highlighted with the red
-        rectangle):
+    b.  Click on Object Storage tab (it is highlighted with the red rectangle): ![](media/image8.jpeg)
 
-![](media/image8.jpeg){width="5.208333333333333in" height="1.25in"}
+    c.  Click on “Add Object Storage”: ![](media/image9.jpeg)
 
-a.  Click on “Add Object Storage”:
+    d.  In the new screen, switch to Bluemix and select the Object Storage service and the container that you provisioned for this lab: ![](media/image10.jpeg)
 
-> ![](media/image9.jpeg){width="6.194444444444445in"
-> height="1.7638888888888888in"}
+    e.  Click on “Select”: the provisioning of Apache Spark Service for DSX has been finished
 
-a.  In the new screen, switch to Bluemix and select the Object Storage
-    service and the container that you provisioned for this lab:
-
-> ![](media/image10.jpeg){width="6.208333333333333in"
-> height="3.2916666666666665in"}
-
-a.  Click on “Select”: the provisioning of Apache Spark Service for DSX
-    has been finished
-
-<!-- -->
-
-1.  Switch back to the tab with DSX in your browser
+8.  Switch back to the tab with DSX in your browser
 
 > NOTE: a more detailed instructions or alternative approaches on
 > setting up an Apache Spark service can be found at
 > <https://console.ng.bluemix.net/docs/services/AnalyticsforApacheSpark/index.html>
 
-Importing Notebooks for Machine Learning Lab
---------------------------------------------
+###Importing Notebooks for Machine Learning Lab
 
-1.  From DSX, select DSX data science mode (the button to click on is
-    > highlighted with the red rectangle):
+1.  From DSX, select DSX data science mode (the button to click on is highlighted with the red rectangle): ![](media/image11.png)
 
-![](media/image11.png){width="1.9722222222222223in"
-height="1.3055555555555556in"}
+2.  From the DSX home page in Data Science mode, click on “Start” to  create a new notebook: ![](media/image12.jpeg)
 
-1.  From the DSX home page in Data Science mode, click on “Start” to
-    > create a new notebook:
-
-![](media/image12.jpeg){width="5.805555555555555in"
-height="3.0694444444444446in"}
-
-1.  In the next screen named “Create Notebook”, switch to “From File”
-    > tab, name the notebook “ML Lab Installation”, and choose the
-    > notebook file on your disk from the archive:
-    > ml-lab-installation.ipynb; alternatively you can switch to “From
-    > URL” tab and use the following “Notebook URL”:
+3.  In the next screen named “Create Notebook”, switch to “From File” tab, name the notebook “ML Lab Installation”, and choose the notebook file on your disk from the archive: ml-lab-installation.ipynb; alternatively you can switch to “From  URL” tab and use the following “Notebook URL”:
 
 > https://github.com/ibmdataworks/sigmo-demos/blob/master/data-scientist/machine-learning/labs/ml-lab-installation.ipynb
 
-1.  Choose the default pre-filled values in the fields (Project: None,
-    > Spark Service: the service that you provisioned for this lab)
+4.  Choose the default pre-filled values in the fields (Project: None, Spark Service: the service that you provisioned for this lab)
 
-2.  Choose to Trust this Notebook to run with your Privileges and click
-    > on Create Notebook
+5.  Choose to Trust this Notebook to run with your Privileges and click on Create Notebook
 
-3.  When DSX loads the notebook, save the current state by clicking on
-    > File &gt; Save and Checkpoint from the menu
+6.  When DSX loads the notebook, save the current state by clicking on File &gt; Save and Checkpoint from the menu
 
-4.  Return back to DSX home page
+7.  Return back to DSX home page
 
-5.  Load the second notebook “Machine Learning with DSX: Lab” (from the
-    > file machine-learning-with-DSX-lab.ipynb, or from URL
-    > https://github.com/ibmdataworks/sigmo-demos/blob/master/data-scientist/machine-learning/labs/machine-learning-with-DSX-lab.ipynb )
-    > by following the same steps 1-7 as above
+8.  Load the second notebook “Machine Learning with DSX: Lab” (from the file machine-learning-with-DSX-lab.ipynb, or from URL https://github.com/ibmdataworks/sigmo-demos/blob/master/data-scientist/machine-learning/labs/machine-learning-with-DSX-lab.ipynb ) by following the same steps 1-7 as above
 
-\
-Switch to the Provisioned Source Data Repository in DSX Lab Notebook
---------------------------------------------------------------------
+###Switch to the Provisioned Source Data Repository in DSX Lab Notebook
 
 This step allows to avoid overloading the default Object Storage service
 by switching to the provisioned Object Storage service.
 
-1.  From the loaded notebook “Machine Learning with DSX Lab” click on
-    > Data Sources:
+1.  From the loaded notebook “Machine Learning with DSX Lab” click on Data Sources: ![](media/image13.jpeg)
 
-![](media/image13.jpeg){width="5.083333333333333in"
-height="1.7222222222222223in"}
+2.  The expanded Data Sources would show transact.csv under “Manage files” section
 
-1.  The expanded Data Sources would show transact.csv under “Manage
-    > files” section
+3.  Identify the cell with the implementation of getObjectStorageFileWithCredentials and replace the code to use your provisioned Object Storage service:
 
-2.  Identify the cell with the implementation of
-    > getObjectStorageFileWithCredentials and replace the code to use
-    > your provisioned Object Storage service:
+    a.  Place your cursor to the cell with the default getObjectStorageFileWithCredentials implementation
+    b.  Create an empty code cell just above the code cell with the default getObjectStorageFileWithCredentials by clicking on the following menu items: “Insert” &gt; “Insert Cell Above” and place your cursor into the new cell
 
-    a.  Place your cursor to the cell with the default
-        getObjectStorageFileWithCredentials implementation
+    ![](media/image14.jpeg)
 
-    b.  Create an empty code cell just above the code cell with the
-        default getObjectStorageFileWithCredentials by clicking on the
-        following menu items: “Insert” &gt; “Insert Cell Above” and
-        place your cursor into the new cell
+    c.  Clicking on “Insert to code” on Transactions.csv will show the options to insert the code: choose “insert base DataFrame” : ![](media/image15.jpeg)
 
-![](media/image14.jpeg){width="6.486111111111111in"
-height="1.6666666666666667in"}
+    d.  Here is a similar code that will be inserted into your new cell: ![](media/image16.jpeg)
 
-a.  Clicking on “Insert to code” on Transactions.csv will show the
-    options to insert the code: choose “insert base DataFrame” :
+    e.  Replace the existing implementation of getObjectStorageFileWithCredentials (starts with “&lt;- function” and finishes with the end of block “}”) with the generated code in the new cell for getObjectStorageFileWithCredentials\_&lt;unique sequence&gt;; Here is the example of the highlighted code that needs to be replaced:
 
-> ![](media/image15.jpeg){width="3.013888888888889in"
-> height="3.263888888888889in"}
+    ![](media/image17.jpeg)
 
-a.  Here is a similar code that will be inserted into your new cell:
+    Take the new code (highlighted with the green rectangle) and place instead of the old code (highlighted with the red rectangle):
 
-![](media/image16.jpeg){width="6.486111111111111in"
-height="1.9305555555555556in"}
+    ![](media/image18.jpeg)
 
-a.  Replace the existing implementation of
-    getObjectStorageFileWithCredentials (starts with “&lt;- function”
-    and finishes with the end of block “}”) with the generated code in
-    the new cell for getObjectStorageFileWithCredentials\_&lt;unique
-    sequence&gt;; Here is the example of the highlighted code that needs
-    to be replaced:
+    f.  Remove the cell with the newly generated code after replacing the default implementation of getObjectStorageFileWithCredentials
 
-![](media/image17.jpeg){width="6.5in" height="3.0416666666666665in"}
+    g.  Check point: after the modifications, the section code should still define a data frame variable df which is used in the notebook; the modifications should be done only for replacing  getObjectStorageFileWithCredentials with the newly generated code for the new Object Storage service
 
-> Take the new code (highlighted with the green rectangle) and place
-> instead of the old code (highlighted with the red rectangle):
+ ###Installing Software Libraries and Packages
 
-![](media/image18.jpeg){width="6.486111111111111in"
-height="4.319444444444445in"}
+1.  From the DSX home page go to “See All” in “My Recent Notebooks” section
 
-a.  Remove the cell with the newly generated code after replacing the
-    default implementation of getObjectStorageFileWithCredentials
+2.  Open “ML Lab Installation” notebook in the list by clicking on the name of the notebook
 
-b.  Check point: after the modifications, the section code should still
-    define a data frame variable df which is used in the notebook; the
-    modifications should be done only for replacing
-    getObjectStorageFileWithCredentials with the newly generated code
-    for the new Object Storage service
+3.  Execute every code section in the order in which the sections appear by clicking on the button ![](media/image19.png) or by using the menu Cell&gt; Run Cells
 
- Installing Software Libraries and Packages
--------------------------------------------
+4.  Ensure that there are no installation failures before proceeding to the lab
 
-1.  From the DSX home page go to “See All” in “My Recent Notebooks”
-    section
+5.  Stop the kernel (File &gt; Stop Kernel) and go back to the list of notebooks (click on the Notebooks:![](media/image20.jpeg))
 
-2.  Open “ML Lab Installation” notebook in the list by clicking on the
-    name of the notebook
+>NOTE: the software packages installation may take a few minutes, but it
+>needs to be done only once per account
 
-3.  Execute every code section in the order in which the sections appear
-    by clicking on the button
-    ![](media/image19.png){width="0.2777777777777778in"
-    height="0.2361111111111111in"} or by using the menu Cell&gt; Run
-    Cells
+##Running Decision Tree Lab 
 
-4.  Ensure that there are no installation failures before proceeding to
-    the lab
+1.  From the DSX home page go to “See All” in “My Recent Notebooks” section
 
-5.  Stop the kernel (File &gt; Stop Kernel) and go back to the list of
-    notebooks (click on the
-    Notebooks:![](media/image20.jpeg){width="1.9722222222222223in"
-    height="0.25in"})
+2.  Open “Machine Learning with DSX: Lab” notebook in the list by clicking on the name of the notebook
 
-NOTE: the software packages installation may take a few minutes, but it
-needs to be done only once per account
-
-Running Decision Tree Lab 
-==========================
-
-1.  From the DSX home page go to “See All” in “My Recent Notebooks”
-    section
-
-2.  Open “Machine Learning with DSX: Lab” notebook in the list by
-    clicking on the name of the notebook
-
-3.  Execute every code section in the order in which the sections appear
-    by clicking on the button
-    ![](media/image19.png){width="0.2777777777777778in"
-    height="0.2361111111111111in"} or by using the menu Cell&gt;
-    Run Cells. The lab covers the following actions:
+3.  Execute every code section in the order in which the sections appear by clicking on the button ![](media/image19.png) or by using the menu Cell&gt; Run Cells. The lab covers the following actions:
 
     a.  Declaring the libraries used in the lab
 
@@ -402,104 +277,66 @@ Running Decision Tree Lab
 
     e.  Transforming the classification model to visualize it in Brunel
 
-    f.  Using a tree map for visualizing and exploring the decision tree
-        in Brunel
+    f.  Using a tree map for visualizing and exploring the decision tree in Brunel
 
     g.  Using a tree for exploring the decision tree in Brunel
 
-    h.  Showing the native R visualization of the decision tree for
-        comparison
+    h.  Showing the native R visualization of the decision tree for comparison
 
-4.  \[Optional step\] Clean-up the output of all sections to prepare the
-    lab for the next user: click on Cell&gt;All Output&gt;Clear
+4.  \[Optional step\] Clean-up the output of all sections to prepare the lab for the next user: click on Cell&gt;All Output&gt;Clear
 
-5.  Stop the kernel (File &gt; Stop Kernel) and go back to the list of
-    notebooks (click on the
-    Notebooks:![](media/image20.jpeg){width="1.9722222222222223in"
-    height="0.25in"})
+5.  Stop the kernel (File &gt; Stop Kernel) and go back to the list of notebooks (click on the Notebooks:![](media/image20.jpeg))
 
 ***End of Lab: Decision Tree***
 
 ***Start of Lab: Association Rules***
 
-Association Rules Lab Installation
-==================================
+##Association Rules Lab Installation
 
-Starting RStudio
-----------------
+###Starting RStudio
 
-1.  Select DSX data science mode (please use the highlighted item to get
-    to this menu):
+1.  Select DSX data science mode (please use the highlighted item to get to this menu):
+![](media/image11.png)
 
-![](media/image11.png){width="1.9722222222222223in"
-height="1.3055555555555556in"}
+2.  Click on the menu icon ![](media/image21.png) on the home page of DSX in Data Science mode
 
-1.  Click on the menu icon
-    ![](media/image21.png){width="0.4305555555555556in"
-    height="0.3194444444444444in"} on the home page of DSX in Data
-    Science mode
+3.  Select RStudio in the open tool bar: RStudio session starts
+![](media/image22.jpeg)
 
-2.  Select RStudio in the open tool bar: RStudio session starts
+###Importing Source Code and Data for Machine Learning Lab in RStudio
 
-![](media/image22.jpeg){width="2.6527777777777777in"
-height="3.1527777777777777in"}
+1.  In “Files” tab use “New folder” to create 2 folders in the user’s home directory - data and demo (please do not mix it with the “File” menu item in the main menu and locate “Files” in the frame depicted here):
 
-Importing Source Code and Data for Machine Learning Lab in RStudio
-------------------------------------------------------------------
+> ![](media/image23.jpeg)
 
-1.  In “Files” tab use “New folder” to create 2 folders in the user’s
-    home directory - data and demo (please do not mix it with the “File”
-    menu item in the main menu and locate “Files” in the frame depicted
-    here):
-
-> ![](media/image23.jpeg){width="6.0in" height="1.4305555555555556in"}
-
-1.  Using “Upload” button upload transactions.csv into the data folder
-    and RStudio-apriori-demo-installation.R, RStudio-apriori-demo.R into
-    the demo folder
+2.  Using “Upload” button upload transactions.csv into the data folder and RStudio-apriori-demo-installation.R, RStudio-apriori-demo.R into the demo folder
 
 \
-Installing Software Libraries and Packages
-------------------------------------------
+###Installing Software Libraries and Packages
 
-1.  Double-click on the name of the file
-    RStudio-apriori-demo-installation.R: RStudio will open the source
-    code:
+1.  Double-click on the name of the file RStudio-apriori-demo-installation.R: RStudio will open the source code:
+> ![](media/image24.jpeg)
 
-> ![](media/image24.jpeg){width="5.444444444444445in"
-> height="1.2916666666666667in"}
+2.  Run the code in RStudio-apriori-demo-installation.R using the Run button ![](media/image25.png): please decline the options to update any packages while installing the new packages
 
-1.  Run the code in RStudio-apriori-demo-installation.R using the Run
-    button ![](media/image25.png){width="0.5694444444444444in"
-    height="0.19444444444444445in"}: please decline the options to
-    update any packages while installing the new packages
+3.  Check point: ensure that all packages install without errors
 
-2.  Check point: ensure that all packages install without errors
+4.  Close the source code editor window for RStudio-apriori-demo-installation.R
 
-3.  Close the source code editor window for
-    RStudio-apriori-demo-installation.R
+>NOTE: the software packages installation may take a few minutes, but it
+>needs to be done only once per account
 
-NOTE: the software packages installation may take a few minutes, but it
-needs to be done only once per account
+##Running Association Rules Lab 
 
-Running Association Rules Lab 
-==============================
+1.  Click on the name of the file RStudio-apriori-demo.R: RStudio will open the source code
 
-1.  Click on the name of the file RStudio-apriori-demo.R: RStudio will
-    open the source code
-
-2.  Execute every code section in the order in which the sections appear
-    by clicking on the button
-    ![](media/image25.png){width="0.5694444444444444in"
-    height="0.19444444444444445in"} . The lab covers the following
-    actions:
+2.  Execute every code section in the order in which the sections appear by clicking on the button ![](media/image25.png) . The lab covers the following actions:
 
     a.  Declaring the libraries used in the lab
 
     b.  Loading the sales data into a data frame
 
-    c.  Data wrangling with R: transforming data to the form required by
-        arules package for Apriori algorithm
+    c.  Data wrangling with R: transforming data to the form required by arules package for Apriori algorithm
 
     d.  Applying Apriori algorithm
 
@@ -507,8 +344,6 @@ Running Association Rules Lab
 
     f.  Visualizing the rules with arulesViz package
 
-<!-- -->
-
-1.  \[Optional step\] Quit RStudio
+3.  \[Optional step\] Quit RStudio
 
 ***End of Lab: Association Rules***
