@@ -41,42 +41,41 @@
 > issue for this lab, we will be using sample datasets hosted in the IBM
 > Object Storage that would be used as a source data set.
 
-2.  **Exploring sales data (for this lab, the data from IBM sample DB “GOSALES” was used): **
+2.  **Exploring sales data** (for this lab, the data from IBM sample DB “GOSALES” was used):
 
-    a.  **Using Decision Tree**: **DSX Notebooks, Brunel, R ** ![Decision Tree Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg "Decision Tree Lab Flow")
+    a.  **Using Decision Tree**: **DSX Notebooks**, **Brunel**, **R** 
+    
+    ![Decision Tree Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Decision-Tree-Lab-Flow.jpg "Decision Tree Lab Flow")
 
-    b.  **Using Association Rules**: **DSX RStudio** ![Association Rules Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Association-Rules-Lab-Flow.jpg "Association Rules Lab Flow")
+    b.  **Using Association Rules**: **DSX RStudio** 
+    
+    ![Association Rules Lab Flow] (https://raw.githubusercontent.com/ibmdataworks/sigmo-demos/master/data-scientist/machine-learning/doc/media/Association-Rules-Lab-Flow.jpg "Association Rules Lab Flow")
 
 
 ##Before You Begin
 
 1.  Download Lab-DSX-ML.zip archive from the github.com location below and extract the data file (transactions.csv) to your laptop:
 
-> <https://github.com/ibmdataworks/sigmo-demos/tree/master/data-scientist/machine-learning>/archive
->
-> Here is the content of the downloaded archive:
+    > <https://github.com/ibmdataworks/sigmo-demos/tree/master/data-scientist/machine-learning>/archive
+    
+    Here is the content of the downloaded archive:
+    
+    -   Folder “data” contains the sample data “transactions.csv”
+    
+    -   Folder “lab” contains the following files:
+    
+        -   machine-learning-with-DSX-lab.ipynb – the notebook for the machine learning lab using decision trees;
+        
+        -   ml-lab-installation.ipynb – the notebook for installing software packages for the machine learning lab (decision trees) ;
+        
+        -   RStudio-apriori-demo.R – R code for the machine learning lab using association rules;
+        
+        -   RStudio-apriori-demo-installation.R – R code for installing software packages for the machine learning lab (association rules)
 
--   Folder “data” contains the sample data “transactions.csv”
-
--   Folder “lab” contains the following files:
-
-    -   machine-learning-with-DSX-lab.ipynb – the notebook for the
-        machine learning lab using decision trees;
-
-    -   ml-lab-installation.ipynb – the notebook for installing software
-        packages for the machine learning lab (decision trees) ;
-
-    -   RStudio-apriori-demo.R – R code for the machine learning lab
-        using association rules;
-
-    -   RStudio-apriori-demo-installation.R – R code for installing
-        software packages for the machine learning lab
-        (association rules)
-
-1.  Login to your IBM DSX account at:  <http://datascience.ibm.com/>
+2.  Login to your IBM DSX account at:  <http://datascience.ibm.com/>
 > NOTE: If you don’t have a DSX account then get started by registering
 > at <https://datasciencex.typeform.com/to/hWECJ3>
-2.  A quick outline of the procedures:
+3.  A quick outline of the procedures:
 
     a.  Decision tree lab (based on the DSX notebooks):
 
@@ -99,7 +98,7 @@
         i.  Start RStudio
 
         ii. Load the data file into RStudio (transactions.csv
-            into \~/data)
+            into ~/data)
 
         iii. Load the R-code with the lab (RStudio-apriori-demo.R) and
             the installation R-code for the software
@@ -115,6 +114,7 @@
 > and the user only needs to go through executing the code with the lab
 > without need to spend time on the installation procedures – there is
 > no need to reinstall the labs for the same environment.
+
 
 > NOTE: In the instructions the sequence “Menu &gt; Submenu &gt; Final
 > Item” would represent the sequence of users’ actions where they choose
@@ -143,7 +143,6 @@ instructions:
 5.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to DS\_DSX\_ML\_ObjectStorage), select the “Free Pricing Plan” and click “Create” at the bottom of the page.
 
 6.  Click on “Actions-&gt;Add Container” and enter “notebooks" as the container name.
-
 > NOTE: Once a new container is created, you get this message "There are
 > no files in the container you selected. Add files or view Object
 > Storage documentation."
@@ -151,7 +150,6 @@ instructions:
 7.  Click on “Add files”.
 
 8.  Select and add the files previously downloaded (transactions.csv) to this Container.
-
 > NOTE: Your data files are now moved to the Object Storage into the
 > Bluemix.
 
@@ -199,7 +197,6 @@ please start from the step 3):
 2.  From the DSX home page in Data Science mode, click on “Start” to  create a new notebook: ![](media/image12.jpeg)
 
 3.  In the next screen named “Create Notebook”, switch to “From File” tab, name the notebook “ML Lab Installation”, and choose the notebook file on your disk from the archive: ml-lab-installation.ipynb; alternatively you can switch to “From  URL” tab and use the following “Notebook URL”:
-
 > https://github.com/ibmdataworks/sigmo-demos/blob/master/data-scientist/machine-learning/labs/ml-lab-installation.ipynb
 
 4.  Choose the default pre-filled values in the fields (Project: None, Spark Service: the service that you provisioned for this lab)
@@ -243,6 +240,8 @@ by switching to the provisioned Object Storage service.
     f.  Remove the cell with the newly generated code after replacing the default implementation of getObjectStorageFileWithCredentials
 
     g.  Check point: after the modifications, the section code should still define a data frame variable df which is used in the notebook; the modifications should be done only for replacing  getObjectStorageFileWithCredentials with the newly generated code for the new Object Storage service
+
+
 
  ###Installing Software Libraries and Packages
 
@@ -306,12 +305,11 @@ by switching to the provisioned Object Storage service.
 ###Importing Source Code and Data for Machine Learning Lab in RStudio
 
 1.  In “Files” tab use “New folder” to create 2 folders in the user’s home directory - data and demo (please do not mix it with the “File” menu item in the main menu and locate “Files” in the frame depicted here):
-
 > ![](media/image23.jpeg)
 
 2.  Using “Upload” button upload transactions.csv into the data folder and RStudio-apriori-demo-installation.R, RStudio-apriori-demo.R into the demo folder
 
-\
+
 ###Installing Software Libraries and Packages
 
 1.  Double-click on the name of the file RStudio-apriori-demo-installation.R: RStudio will open the source code:
