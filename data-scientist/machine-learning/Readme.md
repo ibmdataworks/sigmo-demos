@@ -31,7 +31,7 @@
  The lab shows how to use these machine learning algorithms for
  uncovering the data insights in sales data.
 
-#Lab Components: DSX 
+##Lab Components: DSX 
 
 1.  **Source Data Repository**: **Object Storage Service**
 > NOTE: This usually is the data hosted in a secure enterprise
@@ -230,20 +230,18 @@ by switching to the provisioned Object Storage service.
     d.  Here is a similar code that will be inserted into your new cell: ![](media/image16.jpeg)
 
     e.  Replace the existing implementation of getObjectStorageFileWithCredentials (starts with “&lt;- function” and finishes with the end of block “}”) with the generated code in the new cell for getObjectStorageFileWithCredentials\_&lt;unique sequence&gt;; Here is the example of the highlighted code that needs to be replaced:
+        ![](media/image17.jpeg)
 
-    ![](media/image17.jpeg)
+        Take the new code (highlighted with the green rectangle) and place instead of the old code (highlighted with the red rectangle):
 
-    Take the new code (highlighted with the green rectangle) and place instead of the old code (highlighted with the red rectangle):
-
-    ![](media/image18.jpeg)
+        ![](media/image18.jpeg)
 
     f.  Remove the cell with the newly generated code after replacing the default implementation of getObjectStorageFileWithCredentials
 
     g.  Check point: after the modifications, the section code should still define a data frame variable df which is used in the notebook; the modifications should be done only for replacing  getObjectStorageFileWithCredentials with the newly generated code for the new Object Storage service
 
 
-
- ###Installing Software Libraries and Packages
+###Installing Software Libraries and Packages
 
 1.  From the DSX home page go to “See All” in “My Recent Notebooks” section
 
