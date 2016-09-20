@@ -230,11 +230,11 @@ by switching to the provisioned Object Storage service.
     d.  Here is a similar code that will be inserted into your new cell: ![](media/image16.jpeg)
 
     e.  Replace the existing implementation of getObjectStorageFileWithCredentials (starts with “&lt;- function” and finishes with the end of block “}”) with the generated code in the new cell for getObjectStorageFileWithCredentials\_&lt;unique sequence&gt;; Here is the example of the highlighted code that needs to be replaced:
-        ![](media/image17.jpeg)
+     ![](media/image17.jpeg)
 
-        Take the new code (highlighted with the green rectangle) and place instead of the old code (highlighted with the red rectangle):
+     Take the new code (highlighted with the green rectangle) and place instead of the old code (highlighted with the red rectangle):
 
-        ![](media/image18.jpeg)
+     ![](media/image18.jpeg)
 
     f.  Remove the cell with the newly generated code after replacing the default implementation of getObjectStorageFileWithCredentials
 
